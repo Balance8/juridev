@@ -19,7 +19,6 @@ const POSTS_PATH = join(process.cwd(), '_articles');
 export function Article({ frontMatter, html }) {
   return (
     <div className="container flex flex-col justify-center mx-auto prose sm:prose-sm lg:prose-lg xl:prose-xl prose-indigo">
-      {/* <div className=""> */}
       <article>
         <h1>{frontMatter.title}</h1>
         <div>by {frontMatter.author.name}</div>
