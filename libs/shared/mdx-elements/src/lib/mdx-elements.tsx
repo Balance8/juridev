@@ -1,6 +1,9 @@
 // libs/shared/mdx-elements/src/lib/mdx-elements.ts
-import { Youtube } from './youtube/youtube';
+import dynamic from 'next/dynamic';
+
+import { CustomLink } from './custom-link/custom-link';
 
 export const mdxElements = {
-  Youtube,
+  a: CustomLink,
+  Youtube: dynamic(() => import('./youtube/youtube')),
 };
